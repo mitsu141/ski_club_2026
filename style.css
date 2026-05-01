@@ -4,35 +4,32 @@ body {
   background: #fafafa;
 }
 
+/* ヘッダー */
 header {
   background: white;
-  padding: 15px;
+  padding: 12px;
   text-align: center;
-  border-bottom: 1px solid #ddd;
   font-weight: bold;
+  border-bottom: 1px solid #ddd;
 }
 
-/* フィード */
+/* グリッド（インスタ風） */
 .feed {
-  max-width: 600px;
-  margin: auto;
-  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* PC */
+  gap: 6px;
+  padding: 6px;
 }
 
 /* カード */
 .card {
   position: relative;
-  margin-bottom: 20px;
-  border-radius: 16px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
   overflow: hidden;
+  border-radius: 10px;
+  border: 3px solid transparent;
   cursor: pointer;
-  border: 4px solid transparent;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: 0.2s;
-}
-
-.card:hover {
-  transform: translateY(-3px);
 }
 
 /* 色分け */
@@ -47,44 +44,36 @@ header {
 /* 画像 */
 .card img {
   width: 100%;
-  height: 260px;
+  height: 100%;
   object-fit: cover;
 }
 
-/* グラデ */
+/* オーバーレイ */
 .overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  background: rgba(0,0,0,0.25);
 }
 
-/* テキスト */
+/* 左上日付 */
 .text {
   position: absolute;
-  bottom: 10px;
-  left: 12px;
+  top: 6px;
+  left: 6px;
   color: white;
-}
-
-.text .day {
   font-size: 12px;
-}
-
-.text .title {
-  font-size: 18px;
   font-weight: bold;
 }
 
-/* バッジ */
+/* 右上バッジ */
 .badge {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  padding: 4px 8px;
-  border-radius: 8px;
+  top: 6px;
+  right: 6px;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 6px;
   color: white;
-  font-size: 12px;
-  font-weight: bold;
 }
 
 .badge.full {
@@ -113,9 +102,20 @@ header {
   border-radius: 15px;
 }
 
+/* タブレット */
+@media (max-width: 900px) {
+  .feed {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 /* スマホ */
 @media (max-width: 600px) {
-  .card img {
-    height: 180px;
+  .feed {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .text {
+    font-size: 10px;
   }
 }
