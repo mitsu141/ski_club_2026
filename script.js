@@ -8,25 +8,23 @@ fetch("events.json")
     events.sort((a, b) => a.sort - b.sort);
 
     events.forEach(e => {
-      const card = document.createElement("div");
 
       let typeClass = "";
       if (e.type === "アルペン") typeClass = "alpine";
       if (e.type === "全体") typeClass = "full";
 
+      const card = document.createElement("div");
       card.className = "card " + typeClass;
 
       card.innerHTML = `
         <img src="${e.image}">
         <div class="overlay"></div>
         <div class="badge ${typeClass}">${e.type}</div>
-        <div class="text">
-          <div class="day">${e.day}</div>
-          <div class="title">${e.title}</div>
-        </div>
+        <div class="text">${e.day}</div>
       `;
 
       card.onclick = () => openModal(e);
+
       feed.appendChild(card);
     });
   });
