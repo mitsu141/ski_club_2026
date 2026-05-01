@@ -11,23 +11,32 @@
 
 <header>🎿 スキー部カレンダー</header>
 
+<!-- カレンダー -->
 <div class="calendar" id="calendar"></div>
 
-<!-- モーダル -->
+<!-- 詳細モーダル -->
 <div class="modal" id="modal">
   <div class="modal-content">
-    <h3 id="dateTitle"></h3>
-    <textarea id="text" placeholder="例：合宿\n白馬・8:00集合"></textarea>
-    <input type="file" id="image">
-    <button onclick="saveEvent()">保存</button>
+    <h2 id="title"></h2>
+    <p id="detail"></p>
     <button onclick="closeModal()">閉じる</button>
   </div>
 </div>
 
-<!-- Firebase CDN（これ重要） -->
-<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-storage-compat.js"></script>
+<!-- 登録フォーム -->
+<div class="form">
+  <h3>イベント登録（コピペ用）</h3>
+  <input id="day" placeholder="日付（例: 15）">
+  <input id="titleInput" placeholder="内容">
+  <input id="dateInput" placeholder="日程">
+  <input id="placeInput" placeholder="場所">
+  <input id="hotelInput" placeholder="宿泊先">
+  <input id="timeInput" placeholder="時間">
+  <input id="carInput" placeholder="車割当て">
+  <input id="imageInput" placeholder="画像URL">
+  <button onclick="generateJSON()">JSON生成</button>
+  <textarea id="output"></textarea>
+</div>
 
 <script src="script.js"></script>
 </body>
