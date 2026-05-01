@@ -3,39 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>スキー部カレンダー</title>
+<title>スキー部イベント</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>🎿 スキー部カレンダー</header>
+<header>🎿 スキー部イベント</header>
 
-<!-- カレンダー -->
-<div class="calendar" id="calendar"></div>
+<div class="feed" id="feed"></div>
 
-<!-- 詳細モーダル -->
 <div class="modal" id="modal">
   <div class="modal-content">
-    <h2 id="title"></h2>
-    <p id="detail"></p>
+    <h2 id="modalTitle"></h2>
+    <p id="modalDetail"></p>
     <button onclick="closeModal()">閉じる</button>
   </div>
-</div>
-
-<!-- 登録フォーム -->
-<div class="form">
-  <h3>イベント登録（コピペ用）</h3>
-  <input id="day" placeholder="日付（例: 15）">
-  <input id="titleInput" placeholder="内容">
-  <input id="dateInput" placeholder="日程">
-  <input id="placeInput" placeholder="場所">
-  <input id="hotelInput" placeholder="宿泊先">
-  <input id="timeInput" placeholder="時間">
-  <input id="carInput" placeholder="車割当て">
-  <input id="imageInput" placeholder="画像URL">
-  <button onclick="generateJSON()">JSON生成</button>
-  <textarea id="output"></textarea>
 </div>
 
 <script src="script.js"></script>
