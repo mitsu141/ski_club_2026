@@ -1,0 +1,65 @@
+{
+  "10": {
+    "title": "シーズンイン合宿",
+    "date": "11月",
+    "place": "狭山",
+    "hotel": "日帰り",
+    "time": "-",
+    "car": "-",
+    "image": "images/sayama.jpg"
+  },
+  "5": {
+    "title": "12月合宿",
+    "date": "12月（1泊2日）",
+    "place": "ダイナランド",
+    "hotel": "未定",
+    "time": "-",
+    "car": "-",
+    "image": "images/dynaland.jpg"
+  },
+  "15": {
+    "title": "アルペン合宿①",
+    "date": "1月（2泊3日）",
+    "place": "菅平",
+    "hotel": "未定",
+    "time": "-",
+    "car": "-",
+    "image": "images/sugadaira.jpg"
+  },
+  "20": {
+    "title": "全体合宿",
+    "date": "2月（4泊5日）",
+    "place": "白馬岩岳",
+    "hotel": "未定",
+    "time": "-",
+    "car": "-",
+    "image": "images/hakuba.jpg"
+  },
+  "22": {
+    "title": "アルペン合宿②",
+    "date": "2月（4泊5日）",
+    "place": "木島平",
+    "hotel": "未定",
+    "time": "-",
+    "car": "-",
+    "image": "images/kijimadaira.jpg"
+  },
+  "25": {
+    "title": "アルペン合宿③",
+    "date": "2月（4泊5日）",
+    "place": "木島平",
+    "hotel": "未定",
+    "time": "-",
+    "car": "-",
+    "image": "images/kijimadaira.jpg"
+  },
+  "28": {
+    "title": "岩岳大会合宿",
+    "date": "3月（5泊6日）",
+    "place": "白馬岩岳",
+    "hotel": "未定",
+    "time": "-",
+    "car": "-",
+    "image": "images/hakuba.jpg"
+  }
+}
