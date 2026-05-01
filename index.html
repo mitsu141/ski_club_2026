@@ -1,1 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>スキー部スケジュール</title>
+<link rel="stylesheet" href="style.css">
+</head>
 
+<body>
+
+<header>
+  <h1>🎿 スキー部スケジュール</h1>
+</header>
+
+<div class="calendar" id="calendar"></div>
+
+<!-- モーダル -->
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <h3 id="dateTitle"></h3>
+    <textarea id="eventText" placeholder="予定を入力"></textarea>
+    <button onclick="saveEvent()">保存</button>
+    <button onclick="closeModal()">閉じる</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
