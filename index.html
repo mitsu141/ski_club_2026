@@ -3,15 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>スキー部スケジュール</title>
+<title>スキー部カレンダー</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-  <h1>🎿 スキー部スケジュール</h1>
-</header>
+<header>🎿 スキー部カレンダー</header>
 
 <div class="calendar" id="calendar"></div>
 
@@ -19,11 +17,17 @@
 <div class="modal" id="modal">
   <div class="modal-content">
     <h3 id="dateTitle"></h3>
-    <textarea id="eventText" placeholder="予定を入力"></textarea>
+    <textarea id="text" placeholder="例：合宿\n白馬・8:00集合"></textarea>
+    <input type="file" id="image">
     <button onclick="saveEvent()">保存</button>
     <button onclick="closeModal()">閉じる</button>
   </div>
 </div>
+
+<!-- Firebase CDN（これ重要） -->
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-storage-compat.js"></script>
 
 <script src="script.js"></script>
 </body>
