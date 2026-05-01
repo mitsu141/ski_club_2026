@@ -15,7 +15,6 @@ header {
   padding: 14px;
   text-align: center;
   font-weight: 600;
-  border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
 /* グリッド */
@@ -38,7 +37,7 @@ header {
 }
 
 .card:hover {
-  transform: translateY(-3px);
+  transform: scale(1.03);
 }
 
 /* 画像 */
@@ -54,31 +53,43 @@ header {
   inset: 0;
   background: linear-gradient(
     to top,
-    rgba(0,0,0,0.65),
+    rgba(0,0,0,0.6),
     rgba(0,0,0,0.2),
     transparent
   );
 }
 
-/* ===== 日付（ここ強化） ===== */
+/* ===== 中央ドーン日付 ===== */
 .text {
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 38px;
+  font-weight: 800;
+  color: rgba(255,255,255,0.95);
 
-  padding: 6px 12px;
-  border-radius: 10px;
+  letter-spacing: 1px;
 
-  background: rgba(15, 23, 42, 0.7);
+  text-shadow:
+    0 4px 12px rgba(0,0,0,0.6),
+    0 1px 2px rgba(0,0,0,0.8);
+
+  pointer-events: none;
+}
+
+/* 背景ぼかし */
+.text::before {
+  content: "";
+  position: absolute;
+  inset: -12px -22px;
+
+  background: rgba(0,0,0,0.25);
   backdrop-filter: blur(6px);
+  border-radius: 12px;
 
-  color: white;
-
-  /* 視認性アップ */
-  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+  z-index: -1;
 }
 
 /* タイトル */
@@ -87,30 +98,18 @@ header {
   bottom: 10px;
   left: 12px;
   right: 12px;
-  font-size: 13px;
-  font-weight: 600;
-  color: white;
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.9);
 }
 
-/* 枠（青系で統一） */
+/* 枠色 */
 .card.full {
   border: 1.5px solid #3b82f6;
 }
 
 .card.alpine {
   border: 1.5px solid #60a5fa;
-}
-
-/* バッジ */
-.badge {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 10px;
-  padding: 3px 8px;
-  border-radius: 6px;
-  background: rgba(15, 23, 42, 0.8);
-  color: #cbd5f5;
 }
 
 /* モーダル */
@@ -139,17 +138,7 @@ header {
 }
 
 @media (max-width: 600px) {
-  .feed {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
-  }
-
   .text {
-    font-size: 16px;
-    padding: 5px 10px;
-  }
-
-  .title {
-    font-size: 12px;
+    font-size: 28px;
   }
 }
