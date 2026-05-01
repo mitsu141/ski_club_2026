@@ -1,19 +1,20 @@
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
-  background: linear-gradient(180deg, #f5f7fa, #e4e9f0);
+  background: #0f172a; /* ネイビー系 */
+  color: white;
 }
 
 /* ヘッダー */
 header {
   position: sticky;
   top: 0;
+  background: rgba(15, 23, 42, 0.9);
   backdrop-filter: blur(10px);
-  background: rgba(255,255,255,0.7);
   padding: 14px;
   text-align: center;
   font-weight: 600;
-  border-bottom: 1px solid rgba(0,0,0,0.05);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
 /* グリッド */
@@ -28,19 +29,18 @@ header {
 .card {
   position: relative;
   aspect-ratio: 1 / 1;
-  border-radius: 16px;
+  border-radius: 14px;
   overflow: hidden;
   cursor: pointer;
 
-  /* 🔥 ここが重要（質感） */
-  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  /* 控えめ影 */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  transition: transform 0.2s ease;
 }
 
-/* ホバー（PC） */
+/* ホバー */
 .card:hover {
-  transform: translateY(-4px) scale(1.02);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+  transform: translateY(-3px);
 }
 
 /* 画像 */
@@ -50,92 +50,83 @@ header {
   object-fit: cover;
 }
 
-/* グラデ強化 */
+/* グラデ（落ち着き） */
 .overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     to top,
-    rgba(0,0,0,0.75),
-    rgba(0,0,0,0.2),
+    rgba(0,0,0,0.6),
+    rgba(0,0,0,0.15),
     transparent
   );
 }
 
-/* 日付（左上） */
+/* 日付 */
 .text {
   position: absolute;
   top: 8px;
   left: 8px;
-  color: white;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
+  font-size: 11px;
+  color: #cbd5f5; /* 薄い青 */
+  font-weight: 500;
 }
 
-/* タイトル（下に追加するとさらに良い） */
+/* タイトル */
 .title {
   position: absolute;
   bottom: 8px;
   left: 10px;
   right: 10px;
+  font-size: 13px;
+  font-weight: 600;
   color: white;
-  font-size: 14px;
-  font-weight: 700;
 }
 
-/* バッジ（改善） */
+/* ===== 枠（ここが差） ===== */
+
+/* 全体合宿 */
+.card.full {
+  border: 1.5px solid #3b82f6;
+}
+
+/* アルペン */
+.card.alpine {
+  border: 1.5px solid #60a5fa;
+  opacity: 0.9;
+}
+
+/* バッジ（小さく） */
 .badge {
   position: absolute;
   top: 8px;
   right: 8px;
-  padding: 3px 8px;
-  border-radius: 999px;
-  font-size: 10px;
-  font-weight: 600;
+  font-size: 9px;
+  padding: 2px 6px;
+  border-radius: 6px;
 
-  backdrop-filter: blur(6px);
-}
-
-/* 色をちょい上品に */
-.badge.full {
-  background: rgba(0,119,204,0.8);
-}
-
-.badge.alpine {
-  background: rgba(255,77,77,0.85);
-}
-
-/* カード枠 → グラデーションに変更（神ポイント） */
-.card.full {
-  box-shadow: 0 0 0 2px rgba(0,119,204,0.4),
-              0 8px 20px rgba(0,119,204,0.25);
-}
-
-.card.alpine {
-  box-shadow: 0 0 0 2px rgba(255,77,77,0.4),
-              0 8px 20px rgba(255,77,77,0.25);
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: #cbd5f5;
 }
 
 /* モーダル */
 .modal {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.6);
   display: none;
   justify-content: center;
   align-items: center;
 }
 
-/* モーダル中身 */
 .modal-content {
-  background: rgba(255,255,255,0.95);
-  backdrop-filter: blur(12px);
+  background: #1e293b;
   padding: 20px;
-  border-radius: 20px;
+  border-radius: 16px;
   width: 90%;
   max-width: 380px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  color: white;
 }
 
 /* スマホ */
