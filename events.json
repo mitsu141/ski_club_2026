@@ -4,43 +4,46 @@
     "date": "2026-05-10",
     "day": "5/10",
     "sort": 20260510,
-    "type": "全体",
+    "type": "NORMAL",
     "image": "images/meet.jpg",
     "place": "神戸クック・ワールドビュッフェ ザザシティ浜松店",
     "hotel": "なし",
     "time": "18:00",
     "car": "未定"
   },
+
   {
     "title": "定期運動会",
     "date": "2026-05-20",
     "day": "5/20",
     "sort": 20260520,
-    "type": "全体",
+    "type": "NORMAL",
     "image": "images/sports.jpg",
     "place": "浜松キャンパス 体育館",
     "hotel": "なし",
     "time": "18:00",
     "car": "未定"
   },
+
   {
     "title": "新入生歓迎会",
     "date": "2026-06-14",
     "day": "6/14",
     "sort": 20260614,
-    "type": "全体",
+    "type": "NORMAL",
     "image": "images/welcome.jpg",
     "place": "茶臼山高原スキー場",
     "hotel": "なし",
     "time": "09:00",
     "car": "集合：杏林堂前セブン（静岡キャンパスは別）"
   },
-　　{
+
+  {
     "title": "アルペン夏合宿",
     "date": "2026-09-12",
-    "day": "9/12-9/13",
-    "sort": 20260614,
-    "type": "アルペン",
+    "day": "9/12",
+    "sort": 20260912,
+    "type": "ALPINE",
     "image": "images/alpinewelcome.jpg",
     "place": "神戸の別荘",
     "hotel": "なし",
@@ -53,79 +56,85 @@
     "date": "2026-11",
     "day": "11月",
     "sort": 20261101,
-    "type": "全体",
+    "type": "NORMAL",
     "image": "images/season.jpg",
     "place": "狭山スキー場（日帰り）",
     "hotel": "なし",
     "time": "未定",
     "car": "未定"
   },
+
   {
     "title": "12月合宿",
     "date": "2026-12",
     "day": "12月",
     "sort": 20261201,
-    "type": "全体",
+    "type": "NORMAL",
     "image": "images/dec.jpg",
     "place": "ダイナランド",
     "hotel": "1泊2日",
     "time": "未定",
     "car": "未定"
   },
+
   {
     "title": "アルペン合宿",
     "date": "2027-01",
     "day": "1月",
     "sort": 20270101,
-    "type": "アルペン",
+    "type": "ALPINE",
     "image": "images/alpine1.jpg",
     "place": "菅平",
     "hotel": "2泊3日",
     "time": "未定",
     "car": "未定"
   },
+
   {
     "title": "全体合宿",
     "date": "2027-02",
     "day": "2月",
     "sort": 20270201,
-    "type": "全体",
+    "type": "NORMAL",
     "image": "images/feb.jpg",
     "place": "白馬岩岳",
     "hotel": "4泊5日",
     "time": "未定",
     "car": "未定"
   },
+
   {
     "title": "アルペン合宿①",
     "date": "2027-02",
     "day": "2月",
     "sort": 20270202,
-    "type": "アルペン",
+    "type": "ALPINE",
     "image": "images/alpine2.jpg",
     "place": "木島平",
     "hotel": "4泊5日",
     "time": "未定",
     "car": "未定"
   },
+
   {
     "title": "アルペン合宿②",
     "date": "2027-02",
     "day": "2月",
     "sort": 20270203,
-    "type": "アルペン",
+    "type": "ALPINE",
     "image": "images/alpine3.jpg",
     "place": "木島平",
     "hotel": "4泊5日",
     "time": "未定",
     "car": "未定"
   },
+
   {
     "title": "岩岳大会合宿",
     "date": "2027-03",
     "day": "3月",
     "sort": 20270301,
-    "type": "全体",
+    "type": "NORMAL",
     "image": "images/march.jpg",
     "place": "白馬岩岳",
     "hotel": "5泊6日",
