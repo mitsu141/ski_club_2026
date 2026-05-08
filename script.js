@@ -35,18 +35,16 @@ function render(events) {
     card.className = "card " + typeClass;
 
     card.innerHTML = `
-      <img src="${e.image}" alt="${e.title}">
-      <div class="overlay"></div>
+  <img src="${e.image}">
+  <div class="overlay"></div>
 
-      <div class="badge ${typeClass}">
-        ${e.type || ""}
-      </div>
+  <div class="badge ${e.type === "アルペン" ? "alpine" : "normal"}">
+    ${e.type === "アルペン" ? "ALPINE" : "NORMAL"}
+  </div>
 
-      <div class="text">${e.day}</div>
-
-      <div class="title">${e.title}</div>
-    `;
-
+  <div class="text">${e.day}</div>
+  <div class="title">${e.title}</div>
+`;
     // クリックでモーダル
     card.addEventListener("click", () => openModal(index));
 
